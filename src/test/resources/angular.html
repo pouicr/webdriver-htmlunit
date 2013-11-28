@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app="docsBindExample">
+<head>
+    <script src="http://code.angularjs.org/1.2.3/angular.min.js"></script>
+    <script>
+        window.sout = function() {
+            angular.module('docsBindExample', [])
+            .controller('Ctrl1', function Ctrl1($scope) {
+            $scope.name = 'yop';
+            });
+        }
+    </script>
+</head>
+<body>
+<div ng-controller="Ctrl1">
+    Hello <input ng-model='name'> <hr/> <button type="button" onclick="window.sout()">Try it</button>
+    <div id="demo" ng-bind="name"></div> <br/>
+    <span ng:bind="name"></span> <br/>
+    <span ng_bind="name"></span> <br/>
+    <span data-ng-bind="name"></span> <br/>
+    <span x-ng-bind="name"></span> <br/>
+</div>
+</body>
+</html>
